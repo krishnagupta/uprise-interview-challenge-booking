@@ -88,10 +88,10 @@ Return all the events between given StartDate & EndDate
 
 ## UI
 
-Create an application with 2 sections
+Create an application UI with 2 sections, build your UI **exactly** to the designs attached below, the sketch file is also in this repo. 
 
  1. Book Event
-		 - Add datepicker (to choose date) 
+		 - Add datepicker (to choose date)   use "react-dates" npm package
 		 - Input (to add minute duration)
 		 - Dropdown to pick timezone (can keep 4-5 limited option)    
 		 - Get FreeSlots Button
@@ -111,7 +111,9 @@ If you finished the above task and are able to create the example UI for the sam
 
 ## Uprise packages to use:
 
-Note: Documentation is not complete. Use your development skills to work out how these components work under the hood. 
+Note: Documentation is not complete. Use your development skills to work out how these components work under the hood. And please ask questions from the team for clarification.
+
+Please use import {DayPickerSingleDateController} from "react-dates" for the calendar picker
 
 - @uprise/button
 - @uprise/card
@@ -127,4 +129,9 @@ e.g. https://www.npmjs.com/package/@uprise/colors
 5. When complete please create a PR into this repo
 
 **Please use any relevant technologies in the Uprise stack to demonstrate your expertise. E.g. react, react functional components, redux, styled components**
+![enter image description here](https://uprise-tech-support.s3-ap-southeast-2.amazonaws.com/1+%282%29.png)
+![enter image description here](https://uprise-tech-support.s3-ap-southeast-2.amazonaws.com/2+%282%29.png)
+![enter image description here](https://uprise-tech-support.s3-ap-southeast-2.amazonaws.com/3+%282%29.png)
+![enter image description here](https://uprise-tech-support.s3-ap-southeast-2.amazonaws.com/4+%281%29.png)
 
+![enter image description here](https://uprise-tech-support.s3-ap-southeast-2.amazonaws.com/5+%281%29.png)
