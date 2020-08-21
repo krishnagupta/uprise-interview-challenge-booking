@@ -59,21 +59,11 @@ So in this API you will pass Date and timezone in which you want to see Dr. Jay'
 10:30 PM
 11:00 PM
 ...
-
-1. As a user the I need to be able to view the
-- Overview details of the Play list owner
-- Playlists available
-- 10 artists featured in any available playlist (this must change to a new set of 10 artists each time the user clicks "Featured" in the nav)
-
-2. These section must be accessible via a navigation
-
-3. Content of each section must be displayed below the navigation
  
  **2.** **Create event:**
  
 Params:
  - DateTime (You can decide the format, timestamp or date format up to you) 
- - List item
  - Duration (In minutes, INT)
 
 Whatever data you will pass it will create the event and store that into the fire store document, if the event already exists for that time you need to return status code 422 or else just store it and return with status 200.
