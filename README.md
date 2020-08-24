@@ -21,7 +21,6 @@ Create these static config variable in app :- (You can decide the variable type)
 
  1.  Start Hours - which will suggest at which time you want to start your availability.
  2.  End Hours - which will suggest at which time you want to end your availability.
- 3.  Duration - Duration of slot
  4.  Timezone - ​America/Los_Angeles
 
 Let's say I set my availability from 10AM - 5PM and slot Duration 30 minutes so free slot API you are supposed to return all the available slots, which will suggest that any customer can book Dr. Jay at any of these times.
@@ -64,7 +63,7 @@ So in this API you will pass Date and timezone in which you want to see Dr. Jay'
  
 Params:
  - DateTime (You can decide the format, timestamp or date format up to you) 
- - Duration (In minutes, INT)
+ - Duration (30 or 60min slots, INT)
 
 Whatever data you will pass it will create the event and store that into the fire store document, if the event already exists for that time you need to return status code 422 or else just store it and return with status 200.
 
