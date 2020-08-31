@@ -3,7 +3,8 @@
 # Introduction #
 
 The purpose of this tool to be built is to make appointment booking between people a lot easier. The
-usual process is to exchange mails between people till they find a convenient time.
+usual process is to exchange mails between people till they find a convenient time which is too slow!
+Use your react and node experience to build a simple booking engine. 
 
 **You should contact us to ask questions or clarification.**
 
@@ -11,28 +12,28 @@ mark.santoso@uprise.co
 
 ### Project Overview ###
 
-You need to fork this repo and create the backend project with node.js/express.js with fire store integration for data storage.
+You need to fork this repo and create the backend project with node.js/express.js with fire store integration for data storage or firebase your choice. 
 
 Purpose of this task is to assume you are building a calendar appointment system where users can see free slots of Dr. Jay and they can book for whatever time period when Dr. Jay is available, which is already a big component of our app.
 
-You will need to create one collection in the firestore `events` which will hold all the events and based on events we can decide at what time you are free.
+You will need to create one collection in the firestore/firebase `events` which will hold all the events and based on events we can decide at what time you are free.
 
-Create these static config variable in app :- (You can decide the variable type)
+Create these static config variables for the app in firebase/firestore:
 
- 1.  Start Hours - which will suggest at which time you want to start your availability.
- 2.  End Hours - which will suggest at which time you want to end your availability.
+ 1.  Start Hours - which will suggest at which time you want to start coach availability.
+ 2.  End Hours - which will suggest at which time you want to end coach availability.
  4.  Timezone - ​America/Los_Angeles
 
 Let's say I set my availability from 10AM - 5PM and slot Duration 30 minutes so free slot API you are supposed to return all the available slots, which will suggest that any customer can book Dr. Jay at any of these times.
 
-Example Output (incase we don't have any event)
+Example Output  
     [
     '2019-11-14T10:00:00',
     '2019-11-14T10:30:00',
     '2019-11-14T11:00:00',
     '2019-11-14T11:30:00',
     ....
-    '2019-11-14T16:30:00', // as the your availability is upto 5PM
+    '2019-11-14T16:30:00',
     ]
 
 In case I have an event already at 2019-11-14T10:00:00, that slot should be excluded.
