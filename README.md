@@ -78,7 +78,7 @@ Return all the events between given StartDate & EndDate
 
 ## UI
 
-Create an application UI with 2 sections, build your UI **exactly** to the designs attached below, the sketch file is also in this repo. 
+Create an application UI, build your UI **exactly** to the designs attached below, the sketch file is also in this repo. 
 
  1. Book Event
 		 - Add datepicker (to choose date)   use "react-dates" npm package
@@ -87,10 +87,6 @@ Create an application UI with 2 sections, build your UI **exactly** to the desig
 		 - Get FreeSlots Button
 
 On that button click, fetch the free slots and show them as buttons or labels on UI and on click of one of them create an event with that time.
-
- 2. Show events (**Bonus**)
-	 - Add date range picker
-	On selecting any date range show all the events.
 
  
 Feel free to ask any further details or if require any further details on this demo task.
