@@ -35,7 +35,7 @@ Create these static slots for the app in firebase/firestore/mongo:
 
 Example Output
 
-[
+startHours: [
 
 '2019-11-14T10:00:00',
 
@@ -49,7 +49,8 @@ Example Output
 
 '2019-11-14T16:30:00',
 
-]
+],
+timezone: "Sydney/Australia
 
   
 
