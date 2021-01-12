@@ -5,53 +5,33 @@
 
   
 
-The purpose of this tool to be built is to make appointment booking between people a lot easier. The
-
-usual process is to exchange mails between people till they find a convenient time which is too slow!
+The purpose of this tool to be built is to make appointment booking system.  
 
 Use your react and node experience to build a simple booking engine.
 
-  
 
 **You should contact us to ask questions or clarification.**
 
   
-
 mark.santoso@uprise.co
 
   
-
 ### Project Overview ###
 
-  
+Purpose of this task is to assume you are building a calendar appointment system where users can see available free slots in the booking system and can book for whatever time periods that are available.
 
-You need to fork this repo and create the backend project with node.js/express.js with fire store integration for data storage or firebase your choice.
+1. You need to fork this repo and create the backend project with node.js/express.js with either firestore/firebase/Mongo DB integration for data storage. 
 
-  
+You will need to pre-create one collection of `events` which will hold all the available 30min slots.
 
-Purpose of this task is to assume you are building a calendar appointment system where users can see free slots of Dr. Jay and they can book for whatever time period when Dr. Jay is available, which is already a big component of our app.
 
-  
-
-You will need to create one collection in the firestore/firebase `events` which will hold all the events and based on events we can decide at what time you are free.
+Create these static slots for the app in firebase/firestore/mongo:
 
   
+1. Start Hours - The start times of each available slot
 
-Create these static config variables for the app in firebase/firestore:
+4. Timezone - Sydney/Australia
 
-  
-
-1. Start Hours - which will suggest at which time you want to start coach availability.
-
-2. End Hours - which will suggest at which time you want to end coach availability.
-
-4. Timezone - ​America/Los_Angeles
-
-  
-
-Let's say I set my availability from 10AM - 5PM and slot Duration 30 minutes so free slot API you are supposed to return all the available slots, which will suggest that any customer can book Dr. Jay at any of these times.
-
-  
 
 Example Output
 
@@ -75,14 +55,9 @@ Example Output
 
 In case I have an event already at 2019-11-14T10:00:00, that slot should be excluded.
 
-  
-
 ### Endpoints ###
 
-  
-
 **1.**  **Free Slots:**
-
   
 
 Params:
@@ -91,47 +66,40 @@ Params:
 
 - Timezone
 
-  
+- duration (30 or 60 min duration)
 
+  
 Return all the free slots available for a given date converted to whatever timezone we pass.
 
   
-
 Example:
 
-  
 
-By default the free slots will be like 10AM, 10:30AM, 11:00 AM.. so on, but that is as per the US/Eastern (or whatever you will set in config/const)
-
-  
-
-So it simply suggests Dr Jay. is available from 10AM-5PM as per US/Eastern timezone. Now if someone from India wants to book Dr. Jay they will like to see Dr. Jay timing as per IST (GMT+5:30)
+By default the free slots will be like 10AM, 10:30AM, 11:00 AM.. so on, but that is as per the Sydney/Australia (or whatever you will set in config/const)
 
   
 
-So in this API you will pass Date and timezone in which you want to see Dr. Jay's availability, which will be like these in IST (GMT+5:30). You can use this in order to help you test the timings : [​https://www.thetimezoneconverter.com](https://www.thetimezoneconverter.com/)
+So it simply suggests the coach in the booking system is available from 10AM-5PM as per Sydney/Australia timezone. Now if someone from India wants to book with the coach they will like to see the coaches timing as per IST (GMT+5:30) on the Frontend
 
   
 
-10:30 PM
+So in this API you will pass Date and timezone in which you want to see the coaches availability, which will be like these in IST (GMT+5:30). You can use this in order to help you test the timings : [​https://www.thetimezoneconverter.com](https://www.thetimezoneconverter.com/)
 
-11:00 PM
-
-...
+  
+ 
 
 **2.**  **Create event:**
 
 Params:
 
-- DateTime (You can decide the format, timestamp or date format up to you)
+- Date/Time (You can decide the format, timestamp or date format up to you)
 
-- Duration (30 or 60min slots, INT)
+- timezone
 
-  
+- duration (30 or 60 min duration)
 
-Whatever data you will pass it will create the event and store that into the fire store document, if the event already exists for that time you need to return status code 422 or else just store it and return with status 200.
+Whatever data you will pass it will create the event and store that into the fire store document, if the event already exists for that time you need to return status code 422.
 
-  
 
 **3.**  **Get**​ **Events:**
 
@@ -141,11 +109,9 @@ Params:
 
 - EndDate
 
-  
 
-Return all the events between given StartDate & EndDate
+Return all the booked time slots display the start and end time of each slot
 
-  
 
 ## UI
 
@@ -159,7 +125,7 @@ Create an application UI, build your UI **exactly** to the designs attached belo
 
 - Add datepicker (to choose date) use "react-dates" npm package
 
-- Input (to add minute duration)
+- Input (to add 30 or 60 minute duration)
 
 - Dropdown to pick timezone (can keep 4-5 limited option)
 
