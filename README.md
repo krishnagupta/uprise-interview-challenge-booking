@@ -183,6 +183,8 @@ e.g. https://www.npmjs.com/package/@uprise/colors
 
 **Please use any relevant technologies in the Uprise stack to demonstrate your expertise. E.g. react, react functional components, redux, styled components**
 
+**Please ignore "Duration" drop down, the duration will always be 30min**
+
 ![enter image description here](https://uprise-tech-support.s3-ap-southeast-2.amazonaws.com/1+%282%29.png)
 
 ![enter image description here](https://uprise-tech-support.s3-ap-southeast-2.amazonaws.com/2+%282%29.png)
