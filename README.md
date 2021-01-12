@@ -66,8 +66,7 @@ Params:
 
 - Timezone
 
-- duration (30 or 60 min duration)
-
+ 
   
 Return all the free slots available for a given date converted to whatever timezone we pass.
 
@@ -96,8 +95,7 @@ Params:
 
 - timezone
 
-- duration (30 or 60 min duration)
-
+ 
 Whatever data you will pass it will create the event and store that into the fire store document, if the event already exists for that time you need to return status code 422.
 
 
@@ -124,8 +122,6 @@ Create an application UI, build your UI **exactly** to the designs attached belo
 1. Book Event
 
 - Add datepicker (to choose date) use "react-dates" npm package
-
-- Input (to add 30 or 60 minute duration)
 
 - Dropdown to pick timezone (can keep 4-5 limited option)
 
