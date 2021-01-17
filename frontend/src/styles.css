@@ -1,0 +1,30 @@
+.SingleDatePicker_picker {
+    position: relative;
+    top: 0px !important;
+}
+
+.DateInput {
+    display: none;
+}
+
+.center {
+    justify-content: center !important;
+}
+
+.card_style {
+    width: 60%;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+body {
+    background-color: #f8f9fa;
+  }
+
+.bg-color {
+    background-color: white;
+}
+
+.display_slots {
+    display: flex;
+}
