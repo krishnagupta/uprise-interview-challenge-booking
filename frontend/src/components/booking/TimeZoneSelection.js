@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import TimezoneSelect from 'react-timezone-select'
 
-const TimeZoneSelection = () => {
-  const [selectedTimezone, setSelectedTimezone] = useState({})
+const TimeZoneSelection = ({ timeZone, handleChange }) => {
 
   return (
     <div>
       <h3>Select your timezone</h3>
       <div>
         <TimezoneSelect
-          value={selectedTimezone}
-          onChange={setSelectedTimezone}
+          value={timeZone}
+          onChange={handleChange('timeZone', timeZone)}
         />
       </div>
     </div>

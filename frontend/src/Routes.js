@@ -6,10 +6,12 @@ import AvailabilitySlots from "./components/availability"
 import BookingStatus from "./components/booking/BookingStatus"
 import ShowAllEvents from "./components/events"
 import ShowEvents from "./components/events/ShowEvents"
- 
+import NavBar from "./components/NavBar"
+
 const Routes = () => {
     return(
         <BrowserRouter>
+            <NavBar />
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/slots" exact component={AvailabilitySlots} />

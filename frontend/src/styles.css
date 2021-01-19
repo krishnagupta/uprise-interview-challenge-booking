@@ -28,3 +28,7 @@ body {
 .display_slots {
     display: flex;
 }
+
+.card_style_events {
+    width: 30%;
+}

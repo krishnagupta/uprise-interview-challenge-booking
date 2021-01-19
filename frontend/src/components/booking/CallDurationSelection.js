@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Select from 'react-select'
 
 const options = [
@@ -7,20 +7,14 @@ const options = [
     { value: '60', label: '60 Minutes' },
   ];
 
-const CallDurationSelection = () => {
-  const [selectedOption, setSelectedOption] = useState(null)
-
-  const handleChange = selected => {
-    setSelectedOption(selected)
-    console.log(`Option selected:`, selected);
-  };
+const CallDurationSelection = ({ duration, handleChange }) => {
 
   return (
     <div>
     <h3>Select call duration</h3>
     <Select
-        value={selectedOption}
-        onChange={handleChange}
+        value={duration}
+        onChange={handleChange('duration', duration)}
         options={options}
       />
       </div>

@@ -1,23 +1,22 @@
 import React from "react";
-import moment from 'moment'
 import { SingleDatePicker } from "react-dates" 
  
-const Calendar = () => {
+const Calendar = ({ date, handleChange }) => {
     return(
-      <div>
+      <>
         <h3>Select a Date</h3>
        <SingleDatePicker
-        date={moment()} // momentPropTypes.momentObj or null
-        onDateChange={date => console.log(date)} // PropTypes.func.isRequired
+        date={date} // momentPropTypes.momentObj or null
+        onDateChange={handleChange('date', date)} // PropTypes.func.isRequired
         focused={true} // PropTypes.bool
-        onFocusChange={({ focused }) => console.log(focused)}
+        onFocusChange={({ focused }) => {}}
         id="calendar" // PropTypes.string.isRequired,
 
         numberOfMonths={1}
         hideKeyboardShortcutsPanel={true}
         noBorder={true}
       />
-      </div>
+      </>
         
     )
 }
