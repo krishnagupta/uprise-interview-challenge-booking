@@ -28,7 +28,7 @@ const ShowEvents = () => {
         <Card className="card_style container mt-5 p-5  bg-color">
             <h3>Here are all the events on {moment(date).format('ll')}</h3>
             <div className="display_slots mt-5">
-            {slots&& slots.map(slot => <Button title={slot} className="mr-2"></Button>)}
+            {slots&& slots.map(slot => <div className="slots"><Button title={slot} className="mr-2"></Button></div>)}
             </div>
      </Card>
     )

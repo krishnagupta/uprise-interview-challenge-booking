@@ -13,8 +13,8 @@ export const createEvents = (event) => {
     .catch(err => console.log(err))
 }
 
-export const getFreeSlots = (date) => {
-    return fetch(`${API}/event/slots?date=${date}`, {
+export const getFreeSlots = ({date, timeZone}) => {
+    return fetch(`${API}/event/slots?date=${date}&timeZone=${timeZone}`, {
         method: "GET",
     })
     .then(response => response.json())

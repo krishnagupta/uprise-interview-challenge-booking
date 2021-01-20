@@ -15,7 +15,7 @@ const AvailabilitySlots = () => {
     const {date, timeZone} = queryString.parse(location.search)
 
     const init = () => {
-        getFreeSlots(date).then(data => {
+        getFreeSlots({date, timeZone}).then(data => {
             setSlots(data.slot)
         }).catch(err => console.log(err))
     }
@@ -41,7 +41,7 @@ const AvailabilitySlots = () => {
         <Card className="card_style container mt-5 p-5  bg-color">
             <h3>Click on any of the time slots to book</h3>
             <div className="display_slots mt-5">
-            {slots && slots.map((slot, index) => <Button title={slot} onClick={() => bookSlot(slot)}className="mr-2"></Button>)}
+            {slots && slots.map((slot, index) => <div className="slots mb-4"><Button title={slot} onClick={() => bookSlot(slot)}className="mr-2"></Button></div>)}
             </div>
         </Card>
     )

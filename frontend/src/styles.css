@@ -27,6 +27,13 @@ body {
 
 .display_slots {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.slots {
+    min-width: 30%;
+    margin-right: 10px;
 }
 
 .card_style_events {

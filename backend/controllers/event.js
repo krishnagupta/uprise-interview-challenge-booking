@@ -14,12 +14,13 @@ exports.create = (req, res) => {
 }
 
 exports.readSlots = (req, res) => {
-    let { date } = req.query
+    let { date, timeZone } = req.query
     Event.find({
      date: {
      $gte: moment(date).startOf('day'),
      $lte: moment(date).endOf('day')
-    }
+    },
+    timeZone: timeZone 
     }, (err, data) => {
         if(err) {
             return res.status(400)
